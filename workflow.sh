@@ -8,8 +8,6 @@ git config --global user.email "${USER_EMAIL}"
 echo ${GITHUB_USERNAME}
 echo ${USER_EMAIL}
 
-
-
 # create Github repo
 gh repo create  sample-app --private 
 
