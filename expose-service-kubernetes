@@ -1,0 +1,34 @@
+Let me break down each command:
+
+1. `gcloud container clusters get-credentials`:
+- Purpose: Configures kubectl to use a specific GKE cluster
+- Real-world alternative: Using service accounts or cloud console UI
+
+2. `kubectl config get-contexts` and `kubectl config use-context`:
+- Purpose: List and switch between different Kubernetes clusters/environments
+- Real-world alternative: Using separate kubeconfig files or tools like kubectx
+
+3. `kubectl config set-context --current --namespace`:
+- Purpose: Switch between namespaces (dev/prod environments)
+- Real-world alternative: Tools like kubens or namespace prefixes in commands
+
+4. `kubectl expose deployment`:
+- Purpose: Creates a service to expose deployments externally
+- Real-world alternatives:
+  - Kubernetes YAML manifests
+  - Helm charts
+  - Infrastructure as Code (Terraform)
+  - Ingress controllers
+
+5. `kubectl get service`:
+- Purpose: Verify service creation and get external IP
+- Real-world alternatives:
+  - Monitoring dashboards
+  - Cloud console UI
+  - Automated health checks
+
+These commands are typically automated in production using:
+- CI/CD pipelines
+- GitOps tools (ArgoCD, Flux)
+- Infrastructure as Code
+- Custom scripts/tools
