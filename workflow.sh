@@ -8,8 +8,17 @@ git config --global user.email "${USER_EMAIL}"
 echo ${GITHUB_USERNAME}
 echo ${USER_EMAIL}
 
+
+
 # create Github repo
 gh repo create  sample-app --private 
+
+# create directory for the app & add repo using git remote  
+mkdir sample-app
+cd sample-app
+git init
+git remote add origin https://github.com/lkaarnasre99/sample-app.git
+git remote -v
 
 # create directory with repo name in cloud shell and download app from storage bucket
 cd ~
@@ -29,3 +38,7 @@ git push orign main
 
 # create a branch Dev
 git checkout -b dev
+git branch
+git status
+
+
