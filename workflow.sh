@@ -22,21 +22,24 @@ git remote -v
 cd ~
 gsutil cp -r gs://spls/gsp330/sample-app/* sample-app
 
-export REGION="REGION"
-export ZONE="ZONE"
+cd ~
+
+export REGION="us-central1"
+export ZONE="us-central1-c"
 for file in sample-app/cloudbuild-dev.yaml sample-app/cloudbuild.yaml; do
     sed -i "s/<your-region>/${REGION}/g" "$file"
     sed -i "s/<your-zone>/${ZONE}/g" "$file"
 done
 
+cd sample-app 
+
 # commit & push to repo
 git add .
 git commit -m "initial commit"
-git push orign main
+git push origin master
 
 # create a branch Dev
 git checkout -b dev
 git branch
 git status
-
 
